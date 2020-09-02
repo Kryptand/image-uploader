@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "projects": {
+    "web-image-uploader": {
+      "projectType": "application",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "css",
+          "storybook": false
+        }
+      },
+      "root": "apps/web-image-uploader",
+      "sourceRoot": "apps/web-image-uploader/src",
+      "architect": {
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "application",
+            "configPath": "apps/web-image-uploader/stencil.config.ts"
+          }
+        },
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "application",
+            "configPath": "apps/web-image-uploader/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "application",
+            "configPath": "apps/web-image-uploader/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "application",
+            "configPath": "apps/web-image-uploader/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    },
+    "api-image-uploader": {
+      "root": "apps/api-image-uploader",
+      "sourceRoot": "apps/api-image-uploader/src",
+      "projectType": "application",
+      "prefix": "api-image-uploader",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/api-image-uploader",
+            "main": "apps/api-image-uploader/src/main.ts",
+            "tsConfig": "apps/api-image-uploader/tsconfig.app.json",
+            "assets": ["apps/api-image-uploader/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-image-uploader/src/environments/environment.ts",
+                  "with": "apps/api-image-uploader/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-image-uploader:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/api-image-uploader/tsconfig.app.json",
+              "apps/api-image-uploader/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/api-image-uploader/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/api-image-uploader/jest.config.js",
+            "tsConfig": "apps/api-image-uploader/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "web-image-upload": {
+      "projectType": "library",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "css",
+          "storybook": false
+        }
+      },
+      "root": "libs/web/image-upload",
+      "sourceRoot": "libs/web/image-upload/src",
+      "architect": {
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web/image-upload/stencil.config.ts"
+          }
+        },
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web/image-upload/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web/image-upload/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/web/image-upload/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nxext/stencil"
+  },
+  "defaultProject": "api-image-uploader"
+}

@@ -1,0 +1,43 @@
+{
+  "npmScope": "image-uploader",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "NTMwOTliYTUtNTFmNC00MGUzLThmM2YtYTA5MzljMjVlM2U5fHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "web-image-uploader": {
+      "tags": []
+    },
+    "api-image-uploader": {
+      "tags": []
+    },
+    "web-image-upload": {
+      "tags": []
+    }
+  }
+}

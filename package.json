@@ -1,0 +1,71 @@
+{
+  "name": "image-uploader",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx workspace-lint && nx lint",
+    "e2e": "nx e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "nx migrate latest",
+    "workspace-schematic": "nx workspace-schematic",
+    "dep-graph": "nx dep-graph",
+    "help": "nx help",
+    "commit": "cz"
+  },
+  "private": true,
+  "dependencies": {
+    "@nestjs/common": "^7.0.0",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "~6.5.5"
+  },
+  "devDependencies": {
+    "@nrwl/nest": "^10.1.0",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/workspace": "10.1.0",
+    "@nxext/stencil": "^10.1.0",
+    "@types/node": "~8.9.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "6.2.0",
+    "eslint": "6.8.0",
+    "prettier": "2.0.4",
+    "ts-node": "~7.0.0",
+    "tslint": "~6.0.0",
+    "typescript": "~3.9.3",
+    "@stencil/core": "1.17.3",
+    "@ionic/core": "^5.1.1",
+    "@nrwl/jest": "10.1.0",
+    "jest": "26.2.2",
+    "@types/jest": "26.0.8",
+    "ts-jest": "26.1.4",
+    "@types/puppeteer": "^2.0.1",
+    "puppeteer": "^2.1.1",
+    "@nrwl/node": "10.1.0",
+    "@nestjs/schematics": "^7.0.0",
+    "@nestjs/testing": "^7.0.0",
+    "@nrwl/eslint-plugin-nx": "10.1.0",
+    "@typescript-eslint/parser": "2.19.2",
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "eslint-config-prettier": "6.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
