@@ -10,6 +10,13 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface ImageUploadButton {
+    }
+    interface ImageUploadCard {
+    }
+    interface ImageUploadDropzone {
+        "caption": string;
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -24,9 +31,30 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLImageUploadButtonElement extends Components.ImageUploadButton, HTMLStencilElement {
+    }
+    var HTMLImageUploadButtonElement: {
+        prototype: HTMLImageUploadButtonElement;
+        new (): HTMLImageUploadButtonElement;
+    };
+    interface HTMLImageUploadCardElement extends Components.ImageUploadCard, HTMLStencilElement {
+    }
+    var HTMLImageUploadCardElement: {
+        prototype: HTMLImageUploadCardElement;
+        new (): HTMLImageUploadCardElement;
+    };
+    interface HTMLImageUploadDropzoneElement extends Components.ImageUploadDropzone, HTMLStencilElement {
+    }
+    var HTMLImageUploadDropzoneElement: {
+        prototype: HTMLImageUploadDropzoneElement;
+        new (): HTMLImageUploadDropzoneElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
+        "image-upload-button": HTMLImageUploadButtonElement;
+        "image-upload-card": HTMLImageUploadCardElement;
+        "image-upload-dropzone": HTMLImageUploadDropzoneElement;
     }
 }
 declare namespace LocalJSX {
@@ -34,9 +62,20 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface ImageUploadButton {
+        "onButtonClicked"?: (event: CustomEvent<void>) => void;
+    }
+    interface ImageUploadCard {
+    }
+    interface ImageUploadDropzone {
+        "caption"?: string;
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-root": AppRoot;
+        "image-upload-button": ImageUploadButton;
+        "image-upload-card": ImageUploadCard;
+        "image-upload-dropzone": ImageUploadDropzone;
     }
 }
 export { LocalJSX as JSX };
@@ -45,6 +84,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "image-upload-button": LocalJSX.ImageUploadButton & JSXBase.HTMLAttributes<HTMLImageUploadButtonElement>;
+            "image-upload-card": LocalJSX.ImageUploadCard & JSXBase.HTMLAttributes<HTMLImageUploadCardElement>;
+            "image-upload-dropzone": LocalJSX.ImageUploadDropzone & JSXBase.HTMLAttributes<HTMLImageUploadDropzoneElement>;
         }
     }
 }

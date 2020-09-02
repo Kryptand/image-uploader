@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+.placeholder-image {
+  margin: 0 auto;
+  padding-top: 36px;
+  width: 114.13px;
+  height: 88.24px;
+}
+.drop-area {
+  width: 338px;
+  height: 218.9px;
+  background-color: #f6f8fb;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%2397BEF4FF' stroke-width='2' stroke-dasharray='8%2c8' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.caption {
+  text-align: center;
+  font-style: normal;
+  padding-top: 36px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.035em;
+}
+.file-input {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.or {
+  margin-top: 19px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.035em;
+  color: #bdbdbd;
+}
+image-upload-button {
+  margin-top: 30px;
+  padding-bottom: 36px;
+}

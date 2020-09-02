@@ -1,0 +1,14 @@
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+image-upload-card {
+  width: 402px;
+}
+image-upload-dropzone {
+  padding-top: 30px;
+}

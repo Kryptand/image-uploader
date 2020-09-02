@@ -7,14 +7,14 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      dir: '../../dist/libs/web-image-upload/dist',
+      dir: '../../../dist/libs/web-image-upload/dist',
     },
     {
       type: 'docs-readme',
     },
     {
       type: 'www',
-      dir: '../../dist/libs/web-image-upload/www',
+      dir: '../../../dist/libs/web-image-upload/www',
       serviceWorker: null, // disable service workers
     },
   ],
