@@ -1,4 +1,4 @@
-import { Event, Component, EventEmitter, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'image-upload-button',
@@ -6,10 +6,9 @@ import { Event, Component, EventEmitter, h } from '@stencil/core';
   shadow: true,
 })
 export class ImageUploadButton {
-  @Event() buttonClicked: EventEmitter<void>;
   render() {
     return (
-      <button onClick={() => this.buttonClicked.emit()}>
+      <button>
         <slot></slot>
       </button>
     );

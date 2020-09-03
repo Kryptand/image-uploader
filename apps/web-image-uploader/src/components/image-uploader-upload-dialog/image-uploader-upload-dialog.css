@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: block;
+  width: 400px;
+  background: #fafafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+h1.title {
+  padding: 36px 0 0 32px;
+}
+image-uploader-progress-bar {
+  margin-top: 31px;
+  padding: 0 28px 44px 32px;
+}

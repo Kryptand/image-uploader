@@ -17,6 +17,12 @@ export namespace Components {
     interface ImageUploadDropzone {
         "caption": string;
     }
+    interface ImageUploadResult {
+    }
+    interface ImageUploaderProgressBar {
+    }
+    interface ImageUploaderUploadDialog {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -49,12 +55,33 @@ declare global {
         prototype: HTMLImageUploadDropzoneElement;
         new (): HTMLImageUploadDropzoneElement;
     };
+    interface HTMLImageUploadResultElement extends Components.ImageUploadResult, HTMLStencilElement {
+    }
+    var HTMLImageUploadResultElement: {
+        prototype: HTMLImageUploadResultElement;
+        new (): HTMLImageUploadResultElement;
+    };
+    interface HTMLImageUploaderProgressBarElement extends Components.ImageUploaderProgressBar, HTMLStencilElement {
+    }
+    var HTMLImageUploaderProgressBarElement: {
+        prototype: HTMLImageUploaderProgressBarElement;
+        new (): HTMLImageUploaderProgressBarElement;
+    };
+    interface HTMLImageUploaderUploadDialogElement extends Components.ImageUploaderUploadDialog, HTMLStencilElement {
+    }
+    var HTMLImageUploaderUploadDialogElement: {
+        prototype: HTMLImageUploaderUploadDialogElement;
+        new (): HTMLImageUploaderUploadDialogElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
         "image-upload-button": HTMLImageUploadButtonElement;
         "image-upload-card": HTMLImageUploadCardElement;
         "image-upload-dropzone": HTMLImageUploadDropzoneElement;
+        "image-upload-result": HTMLImageUploadResultElement;
+        "image-uploader-progress-bar": HTMLImageUploaderProgressBarElement;
+        "image-uploader-upload-dialog": HTMLImageUploaderUploadDialogElement;
     }
 }
 declare namespace LocalJSX {
@@ -63,12 +90,17 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface ImageUploadButton {
-        "onButtonClicked"?: (event: CustomEvent<void>) => void;
     }
     interface ImageUploadCard {
     }
     interface ImageUploadDropzone {
         "caption"?: string;
+    }
+    interface ImageUploadResult {
+    }
+    interface ImageUploaderProgressBar {
+    }
+    interface ImageUploaderUploadDialog {
     }
     interface IntrinsicElements {
         "app-home": AppHome;
@@ -76,6 +108,9 @@ declare namespace LocalJSX {
         "image-upload-button": ImageUploadButton;
         "image-upload-card": ImageUploadCard;
         "image-upload-dropzone": ImageUploadDropzone;
+        "image-upload-result": ImageUploadResult;
+        "image-uploader-progress-bar": ImageUploaderProgressBar;
+        "image-uploader-upload-dialog": ImageUploaderUploadDialog;
     }
 }
 export { LocalJSX as JSX };
@@ -87,6 +122,9 @@ declare module "@stencil/core" {
             "image-upload-button": LocalJSX.ImageUploadButton & JSXBase.HTMLAttributes<HTMLImageUploadButtonElement>;
             "image-upload-card": LocalJSX.ImageUploadCard & JSXBase.HTMLAttributes<HTMLImageUploadCardElement>;
             "image-upload-dropzone": LocalJSX.ImageUploadDropzone & JSXBase.HTMLAttributes<HTMLImageUploadDropzoneElement>;
+            "image-upload-result": LocalJSX.ImageUploadResult & JSXBase.HTMLAttributes<HTMLImageUploadResultElement>;
+            "image-uploader-progress-bar": LocalJSX.ImageUploaderProgressBar & JSXBase.HTMLAttributes<HTMLImageUploaderProgressBarElement>;
+            "image-uploader-upload-dialog": LocalJSX.ImageUploaderUploadDialog & JSXBase.HTMLAttributes<HTMLImageUploaderUploadDialogElement>;
         }
     }
 }

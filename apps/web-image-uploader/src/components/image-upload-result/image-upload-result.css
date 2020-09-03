@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+image-upload-card {
+  width: 402px;
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.icon {
+  height: 35px;
+  width: 35px;
+}
+.result-subscription {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.035em;
+}
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.preview img {
+  object-fit: contain;
+  width: 340px;
+  height: 225px;
+}
+.image-link {
+  display: flex;
+  overflow: hidden;
+  background: #f6f8fb;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 34px;
+}
+.image-link .link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 12px;
+  /* identical to box height */
+  color: #4f4f4f;
+  padding: 13px;
+  letter-spacing: -0.035em;
+}
+.image-link image-upload-button {
+  width: 100px;
+  margin-left: -4px;
+}
+.content {
+  padding-bottom: 35px;
+}
